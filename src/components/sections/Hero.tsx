@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
         transition={{ type: "spring", stiffness: 500, damping: 28 }}
       />
 
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-24 lg:pt-28 pb-8 flex items-center min-h-screen hero-content-mobile">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-28 pb-8 flex items-center min-h-screen">
         <div className="w-full max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
             {/* Content */}
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="text-white space-y-1 sm:space-y-6 lg:space-y-8 text-center lg:text-left -mt-4 sm:mt-0"
+              className="text-white space-y-6 sm:space-y-8 text-center lg:text-left"
             >
               {/* Main Title */}
               <motion.div

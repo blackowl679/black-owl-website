@@ -349,9 +349,4 @@ html {
   }
 }
 
-/* MOBILE HERO SPACING - Solo afecta el contenido, no las animaciones */
-@media (max-width: 640px) {
-  .hero-content-mobile {
-    padding-top: 50px !important;
-  }
-} 
+ 
