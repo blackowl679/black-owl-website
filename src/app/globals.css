@@ -322,4 +322,30 @@ html {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+}
+
+/* FORCE MOBILE HERO SPACING */
+@media (max-width: 640px) {
+  #inicio {
+    min-height: 100vh !important;
+  }
+  
+  #inicio > div:first-child {
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+  }
+  
+  #inicio .space-y-1 > * + * {
+    margin-top: 8px !important;
+  }
+  
+  #inicio h1 {
+    line-height: 1.1 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  /* Force content to move up */
+  #inicio > div:first-child > div > div > div:first-child {
+    margin-top: -20px !important;
+  }
 } 
