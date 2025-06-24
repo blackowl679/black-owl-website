@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
         transition={{ type: "spring", stiffness: 500, damping: 28 }}
       />
 
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-24 lg:pt-28 pb-8 flex items-center min-h-screen">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-24 lg:pt-28 pb-8 flex items-center min-h-screen hero-content-mobile">
         <div className="w-full max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
             {/* Content */}
