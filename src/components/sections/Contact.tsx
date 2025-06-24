@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
   }))
 
   return (
-    <section id="contacto" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
+    <section id="contacto" className="pt-24 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0" style={{
@@ -182,7 +182,7 @@ const Contact: React.FC = () => {
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
           <motion.h2 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 mt-8 sm:mt-12 lg:mt-16"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ delay: 0.3, duration: 0.8 }}

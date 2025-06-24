@@ -144,7 +144,7 @@ const Services: React.FC = () => {
   }))
 
   return (
-    <section id="servicios" className="pt-20 sm:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
+    <section id="servicios" className="pt-24 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -669,8 +669,7 @@ const Services: React.FC = () => {
                     Servicios contables tradicionales
                   </h3>
                   <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-                    Nuestra base sólida en contabilidad tradicional, ejecutada con la misma excelencia de siempre, 
-                    ahora respaldada con visión tecnológica.
+                    Aunque en BLACK OWL apostamos por la innovación con IA, entendemos que toda transformación empresarial necesita una base sólida. Por eso, seguimos ofreciendo nuestros servicios contables y fiscales con el mismo compromiso, precisión y visión estratégica que nos ha definido desde el inicio.
                   </p>
                 </div>
 

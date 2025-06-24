@@ -51,7 +51,7 @@ const About: React.FC = () => {
   }))
 
   return (
-    <section id="nosotros" className="pt-20 sm:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
+    <section id="nosotros" className="pt-24 sm:pt-36 lg:pt-40 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0" style={{
