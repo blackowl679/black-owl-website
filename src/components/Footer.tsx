@@ -203,14 +203,52 @@ const Footer: React.FC = () => {
           transition={{ delay: 1.2 }}
           className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8"
         >
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
-              © 2024 BLACK OWL. Todos los derechos reservados.
-            </p>
-            <div className="flex items-center space-x-1 text-gray-400 text-xs sm:text-sm">
-              <span>Desarrollado con</span>
-              <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 animate-pulse" />
-              <span>y tecnología IA</span>
+          <div className="flex flex-col gap-4">
+            {/* Enlaces legales */}
+            <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm">
+              <motion.a
+                href="/politica-privacidad"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.3 }}
+                className="text-gray-400 hover:text-accent-400 transition-colors duration-300"
+              >
+                Política de Privacidad
+              </motion.a>
+              <span className="text-gray-600">•</span>
+              <motion.a
+                href="/politica-cookies"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.4 }}
+                className="text-gray-400 hover:text-accent-400 transition-colors duration-300"
+              >
+                Política de Cookies
+              </motion.a>
+              <span className="text-gray-600">•</span>
+              <motion.a
+                href="/terminos-condiciones"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.5 }}
+                className="text-gray-400 hover:text-accent-400 transition-colors duration-300"
+              >
+                Términos y Condiciones
+              </motion.a>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
+                © 2025 BLACK OWL. Todos los derechos reservados.
+              </p>
+              <div className="flex items-center space-x-1 text-gray-400 text-xs sm:text-sm">
+                <span>Desarrollado con</span>
+                <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 animate-pulse" />
+                <span>y tecnología IA</span>
+              </div>
             </div>
           </div>
         </motion.div>
