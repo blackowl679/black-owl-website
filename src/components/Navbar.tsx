@@ -2,11 +2,15 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Bot, Phone, Sparkles } from 'lucide-react'
+import { Menu, X, Phone, Sparkles } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,22 +21,19 @@ const Navbar: React.FC = () => {
   }, [])
 
   const menuItems = [
-    { href: '/', label: 'Inicio' },
-    { href: '/nosotros', label: 'Nosotros' },
-    { href: '/servicios', label: 'Servicios' },
-    { href: '/contacto', label: 'Contacto' },
+    { label: 'Inicio', path: '/' },
+    { label: 'Servicios', path: '/servicios' },
+    { label: 'Nosotros', path: '/nosotros' },
+    { label: 'Contacto', path: '/contacto' },
   ]
 
-  const handleNavigation = (href: string) => {
-    if (href.startsWith('/')) {
-      window.location.href = href
-    } else {
-      const element = document.querySelector(href)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-    setIsOpen(false)
+  const handleNavigation = (path: string) => {
+    setIsMobileMenuOpen(false)
+    router.push(path)
+  }
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   return (
@@ -55,13 +56,20 @@ const Navbar: React.FC = () => {
           >
             <div className="relative">
               <motion.div
-                className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center overflow-hidden"
                 animate={{ 
                   boxShadow: ["0 0 20px rgba(26,142,235,0.3)", "0 0 30px rgba(25,235,145,0.5)", "0 0 20px rgba(26,142,235,0.3)"]
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <Bot className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+                <Image
+                  src="/images/company/logo.png"
+                  alt="BLACK OWL Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain"
+                  priority
+                />
               </motion.div>
               <motion.div
                 className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-accent-400 rounded-full"
@@ -82,8 +90,8 @@ const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {menuItems.map((item, index) => (
               <motion.button
-                key={item.href}
-                onClick={() => handleNavigation(item.href)}
+                key={item.path}
+                onClick={() => handleNavigation(item.path)}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -168,8 +176,8 @@ const Navbar: React.FC = () => {
               <div className="px-4 py-6 sm:px-6 sm:py-8 space-y-4 sm:space-y-6">
                 {menuItems.map((item, index) => (
                   <motion.button
-                    key={item.href}
-                    onClick={() => handleNavigation(item.href)}
+                    key={item.path}
+                    onClick={() => handleNavigation(item.path)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}

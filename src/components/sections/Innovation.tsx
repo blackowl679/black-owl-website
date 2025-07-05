@@ -10,9 +10,9 @@ const Innovation: React.FC = () => {
 
   const innovations = [
     {
-      icon: Bot,
+      icon: () => <img src="/images/hero/soren-avatar.png" alt="SOREN Avatar" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />,
       title: "SOREN – Tu agente IA contable",
-      description: "Soren es tu asistente contable inteligente en Telegram. Diseñado para emprendedores y empresas, Soren te acompaña las 24/7 resolviendo tus dudas fiscales, ayudándote a emitir facturas y organizando tu información contable sin complicaciones.",
+      description: "Soren es tu asistente contable inteligente en WhatsApp. Diseñado para emprendedores y empresas, Soren te acompaña las 24/7 resolviendo tus dudas fiscales, ayudándote a emitir facturas y organizando tu información contable sin complicaciones.",
       color: "from-accent-500 to-accent-600",
       buttonText: "Quiero saber más",
       buttonLink: "/servicios#soren"
@@ -265,7 +265,7 @@ const Innovation: React.FC = () => {
                       transition: { duration: 0.3 }
                     }}
                   >
-                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10" />
+                    {innovation.title.includes('SOREN') ? <Icon /> : <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10" />}
                     <motion.div 
                       className={`absolute inset-0 bg-gradient-to-r ${innovation.color} rounded-xl sm:rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300`}
                       animate={{ 

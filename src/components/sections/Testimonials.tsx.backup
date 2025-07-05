@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
       company: "Critters",
       companyLogo: "/images/logos/critters.png",
       avatar: "/api/placeholder/100/100",
-      content: "Llevaba meses batallando con temas fiscales, perder tiempo facturando y acumulando papeles sin sentido. Con Soren, todo eso se resolvió en días. Literal, ahora mando un mensaje por Telegram y ya tengo mi factura lista. BLACK OWL me hizo sentir que la tecnología también puede ser accesible para las emprendedoras como yo.",
+      content: "Llevaba meses batallando con temas fiscales, perder tiempo facturando y acumulando papeles sin sentido. Con Soren, todo eso se resolvió en días. Literal, ahora mando un mensaje por WhatsApp y ya tengo mi factura lista. BLACK OWL me hizo sentir que la tecnología también puede ser accesible para las emprendedoras como yo.",
       rating: 5,
       highlight: "Tecnología accesible"
     },

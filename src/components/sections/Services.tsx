@@ -25,7 +25,7 @@ const Services: React.FC = () => {
       id: 'soren',
       title: 'SOREN - IA Contable',
       subtitle: 'Tu agente inteligente 24/7',
-      icon: Bot,
+      icon: () => <img src="/images/hero/soren-avatar.png" alt="SOREN Avatar" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />,
       color: 'from-accent-500 to-accent-600'
     },
     {
@@ -505,9 +505,13 @@ const Services: React.FC = () => {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring" }}
-                    className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-accent-500/25"
+                    className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-accent-500 to-accent-600 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-accent-500/25 overflow-hidden"
                   >
-                    <Bot className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                    <img 
+                      src="/images/hero/soren-avatar.png" 
+                      alt="SOREN Avatar" 
+                      className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
+                    />
                   </motion.div>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
                     SOREN – Tu agente IA contable
@@ -638,7 +642,7 @@ const Services: React.FC = () => {
                 {/* CTA */}
                 <div className="text-center mt-8 sm:mt-12">
                   <motion.a
-                    href="https://t.me/Soren_BW_Bot"
+                    href="https://wa.me/message/FKMWTP7IMGCCD1"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}

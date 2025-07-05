@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://bwblackowl.com'),
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://bwblackowl.com' : 'http://localhost:3000'),
   alternates: {
     canonical: '/',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/og/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'BLACK OWL - Firma contable e IA',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BLACK OWL - Firma contable e IA',
     description: 'Revolucionamos tu negocio y contabilidad con IA.',
-    images: ['/og-image.jpg'],
+    images: ['/images/og/og-image.jpg'],
   },
   robots: {
     index: true,

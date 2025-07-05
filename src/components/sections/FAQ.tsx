@@ -12,16 +12,16 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       category: "SOREN - IA Contable",
-      icon: Bot,
+      icon: () => <img src="/images/hero/soren-avatar.png" alt="SOREN Avatar" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />,
       color: "from-accent-500 to-accent-600",
       questions: [
         {
           question: "¿Qué diferencia a SOREN de otros asistentes o plataformas de contabilidad?",
-          answer: "SOREN combina inteligencia artificial con asesoría fiscal personalizada. Responde dudas, organiza tu contabilidad y emite facturas desde Telegram, todo con el respaldo de expertos contables reales."
+          answer: "SOREN combina inteligencia artificial con asesoría fiscal personalizada. Responde dudas, organiza tu contabilidad y emite facturas desde WhatsApp, todo con el respaldo de expertos contables reales."
         },
         {
           question: "¿Puedo probar SOREN antes de contratar?",
-          answer: "Claro. Puedes comenzar probando a SOREN gratis desde Telegram visitando @Soren_BW_Bot. No requiere instalación ni configuración inicial."
+          answer: "Claro. Puedes comenzar probando a SOREN gratis desde WhatsApp. No requiere instalación ni configuración inicial."
         },
         {
           question: "¿Los servicios de SOREN cumplen con la normativa fiscal mexicana?",
@@ -275,7 +275,7 @@ const FAQ: React.FC = () => {
                       whileHover={{ scale: 1.1, rotate: [0, 5, -5, 0] }}
                       transition={{ duration: 0.5 }}
                     >
-                      <CategoryIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white relative z-10" />
+                      {category.category === "SOREN - IA Contable" ? <CategoryIcon /> : <CategoryIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white relative z-10" />}
                       {/* Icon pulse */}
                       <motion.div
                         className="absolute inset-0 bg-white/20 rounded-xl"

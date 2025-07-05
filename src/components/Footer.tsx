@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Bot, Mail, Phone, Calendar, ArrowRight, Heart } from 'lucide-react'
+import { Mail, Phone, Calendar, ArrowRight, Heart, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
 
 const Footer: React.FC = () => {
   return (
@@ -16,15 +17,21 @@ const Footer: React.FC = () => {
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         <div className="grid gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Logo y descripción */}
-          <div className="md:col-span-2 lg:col-span-1">
+          <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="flex items-center space-x-3 mb-4 sm:mb-6"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
-                <Bot className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/images/company/logo.png"
+                  alt="BLACK OWL Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <span className="text-xl sm:text-2xl font-bold gradient-text">BLACK OWL</span>
@@ -59,14 +66,14 @@ const Footer: React.FC = () => {
                 Agendar reunión
               </motion.a>
               <motion.a
-                href="https://t.me/Soren_BW_Bot"
+                href="https://wa.me/message/FKMWTP7IMGCCD1"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white py-2.5 px-4 sm:py-3 sm:px-6 rounded-lg font-semibold transition-all duration-300 shadow-lg text-sm sm:text-base"
               >
-                <Bot className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-4 h-4 mr-2" />
                 Probar Soren gratis
               </motion.a>
             </motion.div>

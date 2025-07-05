@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
               >
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                   <span className="block">La firma que</span>
-                  <span className="block gradient-text text-glow">revolucionará</span>
+                  <span className="block gradient-text text-glow">transformará</span>
                   <span className="block">tu negocio con</span>
                   <span className="block text-accent-400 animate-pulse">INTELIGENCIA ARTIFICIAL</span>
                 </h1>
@@ -155,7 +155,7 @@ const Hero: React.FC = () => {
                 </motion.a>
 
                 <motion.a
-                  href="https://t.me/Soren_BW_Bot"
+                  href="https://wa.me/message/FKMWTP7IMGCCD1"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(25, 235, 145, 0.5)" }}

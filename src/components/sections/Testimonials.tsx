@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
       company: "Critters",
       companyLogo: "/images/logos/critters.png",
       avatar: "/api/placeholder/100/100",
-      content: "Llevaba meses batallando con temas fiscales, perder tiempo facturando y acumulando papeles sin sentido. Con Soren, todo eso se resolvió en días. Literal, ahora mando un mensaje por Telegram y ya tengo mi factura lista. BLACK OWL me hizo sentir que la tecnología también puede ser accesible para las emprendedoras como yo.",
+      content: "Llevaba meses batallando con temas fiscales, perder tiempo facturando y acumulando papeles sin sentido. Con Soren, todo eso se resolvió en días. Literal, ahora mando un mensaje por WhatsApp y ya tengo mi factura lista. BLACK OWL me hizo sentir que la tecnología también puede ser accesible para las emprendedoras como yo.",
       rating: 5,
       highlight: "Tecnología accesible"
     },
@@ -387,9 +387,22 @@ const Testimonials: React.FC = () => {
                     transition={{ delay: 0.6, duration: 0.6 }}
                     className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4"
                   >
-                    <div className="w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center relative overflow-hidden">
-                      <User className="w-8 h-8 sm:w-9 sm:h-9 text-white relative z-10" />
-                      {/* Avatar pulse */}
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white/10 rounded-full flex items-center justify-center relative overflow-hidden p-0">
+                      <img 
+                        src={testimonials[currentIndex].companyLogo} 
+                        alt={`${testimonials[currentIndex].company} logo`}
+                        className="w-full h-full object-cover relative z-10"
+                        onError={(e) => {
+                          // Fallback to Building icon if image fails to load
+                          e.currentTarget.style.display = 'none';
+                          const nextElement = e.currentTarget.nextElementSibling;
+                          if (nextElement) {
+                            (nextElement as HTMLElement).style.display = 'block';
+                          }
+                        }}
+                      />
+                      <Building className="w-10 h-10 sm:w-12 sm:h-12 text-white relative z-10 hidden" />
+                      {/* Logo pulse */}
                       <motion.div
                         className="absolute inset-0 bg-white/20 rounded-full"
                         animate={{ opacity: [0, 0.3, 0] }}
@@ -400,17 +413,8 @@ const Testimonials: React.FC = () => {
                       <h4 className="text-lg sm:text-xl font-bold text-white">{testimonials[currentIndex].name}</h4>
                       <p className="text-sm sm:text-base text-primary-400">{testimonials[currentIndex].position}</p>
                       <div className="flex items-center justify-center sm:justify-start space-x-2 mt-1">
-                        <div className="w-5 h-5 bg-white/10 rounded flex items-center justify-center overflow-hidden">
-                          <img 
-                            src={testimonials[currentIndex].companyLogo} 
-                            alt={`${testimonials[currentIndex].company} logo`}
-                            className="w-full h-full object-contain"
-                            onError={(e) => {
-                              // Fallback to Building icon if image fails to load
-                              e.currentTarget.style.display = 'none';
-                            }}
-                          />
-                          <Building className="w-3 h-3 text-gray-400" style={{ display: 'none' }} />
+                        <div className="w-5 h-5 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
+                          <User className="w-3 h-3 text-white" />
                         </div>
                         <p className="text-sm text-gray-400">{testimonials[currentIndex].company}</p>
                       </div>

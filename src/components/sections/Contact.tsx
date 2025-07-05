@@ -439,7 +439,7 @@ const Contact: React.FC = () => {
                   </motion.a>
 
                   <motion.a
-                    href="https://t.me/Soren_BW_Bot"
+                    href="https://wa.me/message/FKMWTP7IMGCCD1"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
@@ -451,11 +451,15 @@ const Contact: React.FC = () => {
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Bot className="w-6 h-6 text-white" />
+                      <img 
+                        src="/images/hero/soren-avatar.png" 
+                        alt="SOREN Avatar" 
+                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
+                      />
                     </motion.div>
                     <div className="flex-1">
                       <h4 className="text-white font-semibold">Probar SOREN gratis</h4>
-                      <p className="text-gray-400 text-sm">Inicia conversación en Telegram</p>
+                      <p className="text-gray-400 text-sm">Inicia conversación en WhatsApp</p>
                     </div>
                     <ArrowRight className="w-5 h-5 text-accent-400 group-hover/btn:text-accent-300" />
                   </motion.a>

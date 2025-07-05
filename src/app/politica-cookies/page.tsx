@@ -302,7 +302,7 @@ const PoliticaCookies: React.FC = () => {
                       <li><strong>CDN Cache:</strong> Entrega rápida de contenido estático</li>
                       <li><strong>Compresión de imágenes:</strong> Optimización automática de recursos</li>
                       <li><strong>Calendly:</strong> Programación optimizada de reuniones</li>
-                      <li><strong>Telegram API:</strong> Conexión eficiente con SOREN</li>
+                      <li><strong>WhatsApp API:</strong> Conexión eficiente con SOREN</li>
                     </ul>
                   </div>
                 </div>
