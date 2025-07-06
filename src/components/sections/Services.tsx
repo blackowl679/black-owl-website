@@ -30,8 +30,8 @@ const Services: React.FC = () => {
     },
     {
       id: 'traditional',
-      title: 'Contabilidad tradicional',
-      subtitle: 'Servicios contables y fiscales',
+      title: 'Servicios contables y fiscales',
+      subtitle: '',
       icon: Calculator,
       color: 'from-purple-500 to-purple-600'
     }
@@ -670,7 +670,7 @@ const Services: React.FC = () => {
                     <Calculator className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                   </motion.div>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
-                    Servicios contables tradicionales
+                    Servicios contables y fiscales
                   </h3>
                   <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
                     Aunque en BLACK OWL apostamos por la innovación con IA, entendemos que toda transformación empresarial necesita una base sólida. Por eso, seguimos ofreciendo nuestros servicios contables y fiscales con el mismo compromiso, precisión y visión estratégica que nos ha definido desde el inicio.
