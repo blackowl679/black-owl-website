@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
       setSubmitStatus('error')
       
       // Reset estado de error después de 3 segundos
-      setTimeout(() => {
+    setTimeout(() => {
         setSubmitStatus('idle')
       }, 3000)
     } finally {
