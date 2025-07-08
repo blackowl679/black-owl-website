@@ -21,6 +21,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
     
     try {
       const response = await fetch('/api/contact', {
@@ -28,18 +29,36 @@ const Contact: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       })
+
+      const result = await response.json()
 
       if (response.ok) {
         setSubmitStatus('success')
         setFormData({ name: '', email: '', phone: '', company: '', message: '' })
+        
+        // Reset estado después de 5 segundos para permitir nuevos envíos
+        setTimeout(() => {
+          setSubmitStatus('idle')
+        }, 5000)
       } else {
         setSubmitStatus('error')
+        console.error('Error:', result.error)
+        
+        // Reset estado de error después de 3 segundos
+        setTimeout(() => {
+          setSubmitStatus('idle')
+        }, 3000)
       }
     } catch (error) {
-      console.error('Error enviando formulario:', error)
+      console.error('Error al enviar formulario:', error)
       setSubmitStatus('error')
+      
+      // Reset estado de error después de 3 segundos
+      setTimeout(() => {
+        setSubmitStatus('idle')
+      }, 3000)
     } finally {
       setIsSubmitting(false)
     }
@@ -359,10 +378,10 @@ const Contact: React.FC = () => {
 
                   <motion.button
                     type="submit"
-                    disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 text-sm sm:text-base relative overflow-hidden"
+                    disabled={isSubmitting || submitStatus === 'success'}
+                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                    className="w-full bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 text-sm sm:text-base relative overflow-hidden"
                   >
                     {/* Button glow effect */}
                     <motion.div
@@ -390,19 +409,19 @@ const Contact: React.FC = () => {
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="text-accent-400 text-sm text-center"
+                      className="text-accent-400 text-sm text-center bg-accent-500/10 border border-accent-500/30 rounded-lg p-3"
                     >
-                      ¡Mensaje enviado correctamente! Te contactaremos pronto.
+                      ✅ ¡Mensaje enviado correctamente! Te contactaremos pronto.
                     </motion.div>
                   )}
-                  
+
                   {submitStatus === 'error' && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="text-red-400 text-sm text-center"
+                      className="text-red-400 text-sm text-center bg-red-500/10 border border-red-500/30 rounded-lg p-3"
                     >
-                      Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.
+                      ❌ Error al enviar el mensaje. Por favor, inténtalo de nuevo.
                     </motion.div>
                   )}
                 </form>

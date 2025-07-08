@@ -1,148 +1,97 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder')
+// Variables de entorno para producción
+const NOCODB_BASE_URL = process.env.NOCODB_BASE_URL || 'https://devnocodb.bwblackowl.com'
+const NOCODB_TOKEN = process.env.NOCODB_TOKEN || 'N2s9-oxHaIaXbqXAcLDoeozLFpOgkLbFUIPqhG7x'
+const BASE_ID = process.env.NOCODB_BASE_ID || 'pjaayty2k4qsdnh'
+const TABLE_ID = process.env.NOCODB_TABLE_ID || 'mjs8cfmgp37f22v'
+
+interface ContactFormData {
+  name: string
+  email: string
+  phone: string
+  company?: string
+  message?: string
+}
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('🚀 API Contact: Iniciando procesamiento...')
-    
-    // Verificar si la API key está configurada correctamente
-    const apiKey = process.env.RESEND_API_KEY
-    console.log('🔑 API Key configurada:', apiKey ? 'SÍ' : 'NO')
-    
-    if (!apiKey || apiKey === 'placeholder') {
-      console.log('❌ Error: API key no configurada')
-      return NextResponse.json(
-        { error: 'Servicio de correo no configurado' },
-        { status: 500 }
-      )
-    }
-
-    console.log('📨 Parseando datos del formulario...')
-    const { name, email, phone, company, message } = await request.json()
-    console.log('📊 Datos recibidos:', { name, email, phone, company: company || 'N/A', messageLength: message?.length })
+    const body: ContactFormData = await request.json()
 
     // Validar campos requeridos
-    if (!name || !email || !phone || !message) {
-      console.log('❌ Error: Campos requeridos faltantes')
+    if (!body.name || !body.email || !body.phone) {
       return NextResponse.json(
-        { error: 'Faltan campos requeridos' },
+        { error: 'Los campos nombre, email y teléfono son obligatorios' },
         { status: 400 }
       )
     }
 
     // Validar formato de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
-      console.log('❌ Error: Formato de email inválido')
+    if (!emailRegex.test(body.email)) {
       return NextResponse.json(
-        { error: 'Formato de email inválido' },
+        { error: 'El formato del email no es válido' },
         { status: 400 }
       )
     }
 
-    // Enviar correo con Resend
-    console.log('📧 Enviando correo con Resend...')
-    const { data, error } = await resend.emails.send({
-      from: 'BLACK OWL Website <onboarding@resend.dev>',
-      to: ['bwblackowl@gmail.com'],
-      subject: `Nuevo Lead - ${name}${company ? ` de ${company}` : ''}`,
-      html: `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="utf-8">
-          <title>Nuevo Lead - BLACK OWL</title>
-          <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
-            .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-            .field { margin-bottom: 20px; }
-            .field-label { font-weight: bold; color: #555; margin-bottom: 5px; }
-            .field-value { background: white; padding: 10px; border-radius: 5px; border-left: 4px solid #667eea; }
-            .footer { text-align: center; margin-top: 30px; color: #666; font-size: 14px; }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <h1>🦉 Nuevo Lead de BLACK OWL</h1>
-              <p>Alguien se interesó en tus servicios</p>
-            </div>
-            <div class="content">
-              <div class="field">
-                <div class="field-label">👤 Nombre:</div>
-                <div class="field-value">${name}</div>
-              </div>
-              
-              <div class="field">
-                <div class="field-label">📧 Correo:</div>
-                <div class="field-value">${email}</div>
-              </div>
-              
-              <div class="field">
-                <div class="field-label">📱 WhatsApp:</div>
-                <div class="field-value">${phone}</div>
-              </div>
-              
-              ${company ? `
-              <div class="field">
-                <div class="field-label">🏢 Empresa:</div>
-                <div class="field-value">${company}</div>
-              </div>
-              ` : ''}
-              
-              <div class="field">
-                <div class="field-label">💬 Mensaje:</div>
-                <div class="field-value">${message}</div>
-              </div>
-              
-              <div class="footer">
-                <p>📅 Recibido el ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
-                <p>Responde pronto para no perder este lead 🚀</p>
-              </div>
-            </div>
-          </div>
-        </body>
-        </html>
-      `,
-      text: `
-        Nuevo Lead de BLACK OWL
-        =======================
-        
-        Nombre: ${name}
-        Correo: ${email}
-        WhatsApp: ${phone}
-        ${company ? `Empresa: ${company}` : ''}
-        
-        Mensaje:
-        ${message}
-        
-        Recibido el ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}
-      `
+    // Preparar datos para NocoDB (nombres exactos como están en la tabla)
+    const nocodbData = {
+      Nombre: body.name.trim(),
+      'Correo electronico': body.email.trim().toLowerCase(),
+      'Celular / Whats App': body.phone.trim(),
+      Empresa: body.company?.trim() || '',
+      Mensaje: body.message?.trim() || '',
+      Estado: 'Nuevo'
+    }
+
+    // Enviar a NocoDB
+    const nocodbUrl = `${NOCODB_BASE_URL}/api/v1/db/data/noco/${BASE_ID}/${TABLE_ID}`
+    
+    const response = await fetch(nocodbUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'xc-token': NOCODB_TOKEN,
+      },
+      body: JSON.stringify(nocodbData)
     })
 
-    if (error) {
-      console.error('❌ Error enviando correo:', error)
+    if (!response.ok) {
+      const errorData = await response.text()
+      console.error('Error de NocoDB:', response.status, errorData)
+      
       return NextResponse.json(
-        { error: 'Error enviando correo', details: error.message },
+        { error: 'Error al guardar la información. Inténtalo de nuevo.' },
         { status: 500 }
       )
     }
 
-    console.log('✅ Correo enviado exitosamente:', data?.id)
+    const result = await response.json()
+    
     return NextResponse.json(
-      { message: 'Correo enviado exitosamente', id: data?.id },
+      { 
+        success: true, 
+        message: '¡Mensaje enviado correctamente! Te contactaremos pronto.',
+        id: result.Id 
+      },
       { status: 200 }
     )
 
   } catch (error) {
-    console.error('💥 Error crítico en API contact:', error)
+    console.error('Error en API de contacto:', error)
+    
     return NextResponse.json(
-      { error: 'Error interno del servidor', details: error instanceof Error ? error.message : 'Unknown error' },
+      { error: 'Error interno del servidor. Inténtalo de nuevo.' },
       { status: 500 }
     )
   }
+}
+
+// Manejar otros métodos HTTP
+export async function GET() {
+  return NextResponse.json(
+    { error: 'Método no permitido' },
+    { status: 405 }
+  )
 } 
