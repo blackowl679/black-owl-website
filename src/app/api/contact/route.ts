@@ -5,18 +5,27 @@ const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder')
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('🚀 API Contact: Iniciando procesamiento...')
+    
     // Verificar si la API key está configurada correctamente
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'placeholder') {
+    const apiKey = process.env.RESEND_API_KEY
+    console.log('🔑 API Key configurada:', apiKey ? 'SÍ' : 'NO')
+    
+    if (!apiKey || apiKey === 'placeholder') {
+      console.log('❌ Error: API key no configurada')
       return NextResponse.json(
         { error: 'Servicio de correo no configurado' },
         { status: 500 }
       )
     }
 
+    console.log('📨 Parseando datos del formulario...')
     const { name, email, phone, company, message } = await request.json()
+    console.log('📊 Datos recibidos:', { name, email, phone, company: company || 'N/A', messageLength: message?.length })
 
     // Validar campos requeridos
     if (!name || !email || !phone || !message) {
+      console.log('❌ Error: Campos requeridos faltantes')
       return NextResponse.json(
         { error: 'Faltan campos requeridos' },
         { status: 400 }
@@ -26,6 +35,7 @@ export async function POST(request: NextRequest) {
     // Validar formato de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
+      console.log('❌ Error: Formato de email inválido')
       return NextResponse.json(
         { error: 'Formato de email inválido' },
         { status: 400 }
@@ -33,6 +43,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Enviar correo con Resend
+    console.log('📧 Enviando correo con Resend...')
     const { data, error } = await resend.emails.send({
       from: 'BLACK OWL Website <onboarding@resend.dev>',
       to: ['bwblackowl@gmail.com'],
@@ -114,22 +125,23 @@ export async function POST(request: NextRequest) {
     })
 
     if (error) {
-      console.error('Error enviando correo:', error)
+      console.error('❌ Error enviando correo:', error)
       return NextResponse.json(
-        { error: 'Error enviando correo' },
+        { error: 'Error enviando correo', details: error.message },
         { status: 500 }
       )
     }
 
+    console.log('✅ Correo enviado exitosamente:', data?.id)
     return NextResponse.json(
       { message: 'Correo enviado exitosamente', id: data?.id },
       { status: 200 }
     )
 
   } catch (error) {
-    console.error('Error en API contact:', error)
+    console.error('💥 Error crítico en API contact:', error)
     return NextResponse.json(
-      { error: 'Error interno del servidor' },
+      { error: 'Error interno del servidor', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     )
   }
