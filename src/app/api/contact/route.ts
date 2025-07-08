@@ -16,6 +16,13 @@ interface ContactFormData {
 
 export async function POST(request: NextRequest) {
   try {
+    // Debug: Log variables de entorno (temporal)
+    console.log('🔍 Variables de entorno:')
+    console.log('NOCODB_TOKEN:', NOCODB_TOKEN ? '✅ Configurado' : '❌ Faltante')
+    console.log('NOCODB_BASE_URL:', NOCODB_BASE_URL)
+    console.log('BASE_ID:', BASE_ID)
+    console.log('TABLE_ID:', TABLE_ID)
+    
     const body: ContactFormData = await request.json()
 
     // Validar campos requeridos
@@ -59,7 +66,9 @@ export async function POST(request: NextRequest) {
 
     if (!response.ok) {
       const errorData = await response.text()
-      console.error('Error de NocoDB:', response.status, errorData)
+      console.error('🚨 Error de NocoDB:', response.status, errorData)
+      console.error('🔗 URL usada:', nocodbUrl)
+      console.error('📦 Datos enviados:', JSON.stringify(nocodbData, null, 2))
       
       return NextResponse.json(
         { error: 'Error al guardar la información. Inténtalo de nuevo.' },
@@ -68,6 +77,7 @@ export async function POST(request: NextRequest) {
     }
 
     const result = await response.json()
+    console.log('✅ Contacto guardado exitosamente:', result.Id)
     
     return NextResponse.json(
       { 
