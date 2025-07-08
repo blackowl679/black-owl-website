@@ -192,7 +192,7 @@ const Hero: React.FC = () => {
                     animate={{ textShadow: ["0 0 10px rgba(26,142,235,0.5)", "0 0 20px rgba(26,142,235,0.8)", "0 0 10px rgba(26,142,235,0.5)"] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                   >
-                    +2,000
+                    +100K
                   </motion.div>
                   <div className="text-xs sm:text-sm text-gray-400 font-medium">Facturas creadas con SOREN</div>
                 </div>
