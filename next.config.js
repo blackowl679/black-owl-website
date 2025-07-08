@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export',
+  // output: 'export', // ❌ REMOVIDO: Esto impedía las funciones API
   trailingSlash: true,
   images: {
     unoptimized: true,
