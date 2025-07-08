@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
     // Enviar correo con Resend
     const { data, error } = await resend.emails.send({
-      from: 'BLACK OWL Website <contacto@bwblackowl.com>',
+      from: 'BLACK OWL Website <onboarding@resend.dev>',
       to: ['bwblackowl@gmail.com'],
       subject: `Nuevo Lead - ${name}${company ? ` de ${company}` : ''}`,
       html: `
