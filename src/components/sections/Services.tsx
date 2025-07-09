@@ -544,37 +544,37 @@ const Services: React.FC = () => {
                   {/* Features with Video - Full Width, Prominent */}
                   <div className="space-y-6 sm:space-y-8">
                     {sorenFeatures.filter(feature => feature.hasVideo).map((feature, index) => {
-                      const Icon = feature.icon
-                      return (
+                    const Icon = feature.icon
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 + index * 0.1 }}
+                        className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-all duration-300 group relative overflow-hidden"
+                      >
+                        {/* Tech glow effect */}
                         <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 30 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.3 + index * 0.1 }}
-                          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-all duration-300 group relative overflow-hidden"
-                        >
-                          {/* Tech glow effect */}
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-accent-500/5 to-primary-500/5 rounded-xl sm:rounded-2xl"
-                            animate={{ opacity: [0.3, 0.7, 0.3] }}
-                            transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
-                          />
-                          
-                          {/* Corner tech elements */}
-                          <div className="absolute top-2 left-2 w-3 h-3 border-l border-t border-accent-400/30 group-hover:border-accent-400/60 transition-colors duration-300" />
-                          <div className="absolute bottom-2 right-2 w-3 h-3 border-r border-b border-primary-400/30 group-hover:border-primary-400/60 transition-colors duration-300" />
-                          
-                          {/* Mini circuit pattern */}
-                          <div className="absolute top-4 right-4 w-6 h-6 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-                            <CircuitBoard className="w-full h-full text-accent-400" />
-                          </div>
-                          
-                          {/* Scanning line */}
-                          <motion.div
-                            className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-400/40 to-transparent"
-                            animate={{ y: [0, 200, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, delay: index * 0.7 }}
-                          />
+                          className="absolute inset-0 bg-gradient-to-r from-accent-500/5 to-primary-500/5 rounded-xl sm:rounded-2xl"
+                          animate={{ opacity: [0.3, 0.7, 0.3] }}
+                          transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
+                        />
+                        
+                        {/* Corner tech elements */}
+                        <div className="absolute top-2 left-2 w-3 h-3 border-l border-t border-accent-400/30 group-hover:border-accent-400/60 transition-colors duration-300" />
+                        <div className="absolute bottom-2 right-2 w-3 h-3 border-r border-b border-primary-400/30 group-hover:border-primary-400/60 transition-colors duration-300" />
+                        
+                        {/* Mini circuit pattern */}
+                        <div className="absolute top-4 right-4 w-6 h-6 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                          <CircuitBoard className="w-full h-full text-accent-400" />
+                        </div>
+                        
+                        {/* Scanning line */}
+                        <motion.div
+                          className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-400/40 to-transparent"
+                          animate={{ y: [0, 200, 0] }}
+                          transition={{ duration: 4, repeat: Infinity, delay: index * 0.7 }}
+                        />
                           
                           <div className="relative z-10">
                             {/* Mobile & Desktop Layout */}
@@ -710,54 +710,54 @@ const Services: React.FC = () => {
                             animate={{ y: [0, 200, 0] }}
                             transition={{ duration: 4, repeat: Infinity, delay: (index + 2) * 0.7 }}
                           />
-                          
-                          <div className="relative z-10">
-                            <div className="flex items-start space-x-4 mb-4 sm:mb-6">
-                              <motion.div 
-                                className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden"
-                                whileHover={{ rotate: [0, 5, -5, 0] }}
-                                transition={{ duration: 0.5 }}
-                              >
-                                <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10" />
-                                {/* Icon pulse effect */}
-                                <motion.div
-                                  className="absolute inset-0 bg-white/20 rounded-xl sm:rounded-2xl"
-                                  animate={{ opacity: [0, 0.5, 0] }}
+                        
+                        <div className="relative z-10">
+                          <div className="flex items-start space-x-4 mb-4 sm:mb-6">
+                            <motion.div 
+                              className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden"
+                              whileHover={{ rotate: [0, 5, -5, 0] }}
+                              transition={{ duration: 0.5 }}
+                            >
+                              <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10" />
+                              {/* Icon pulse effect */}
+                              <motion.div
+                                className="absolute inset-0 bg-white/20 rounded-xl sm:rounded-2xl"
+                                animate={{ opacity: [0, 0.5, 0] }}
                                   transition={{ duration: 2, repeat: Infinity, delay: (index + 2) * 0.3 }}
-                                />
-                              </motion.div>
-                              <div className="flex-1">
-                                <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{feature.title}</h4>
-                                <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4">{feature.description}</p>
-                              </div>
-                            </div>
-
-                            {/* Benefits */}
-                            <div className="grid gap-2">
-                              {feature.benefits.map((benefit, benefitIndex) => (
-                                <motion.div 
-                                  key={benefitIndex} 
-                                  className="flex items-center space-x-2"
-                                  initial={{ opacity: 0, x: -20 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  transition={{ delay: 0.7 + benefitIndex * 0.1 }}
-                                >
-                                  <CheckCircle className="w-4 h-4 text-accent-400" />
-                                  <span className="text-xs sm:text-sm text-gray-400">{benefit}</span>
-                                </motion.div>
-                              ))}
+                              />
+                            </motion.div>
+                            <div className="flex-1">
+                              <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{feature.title}</h4>
+                              <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4">{feature.description}</p>
                             </div>
                           </div>
-                        </motion.div>
-                      )
-                    })}
+
+                          {/* Benefits */}
+                            <div className="grid gap-2">
+                            {feature.benefits.map((benefit, benefitIndex) => (
+                              <motion.div 
+                                key={benefitIndex} 
+                                className="flex items-center space-x-2"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                  transition={{ delay: 0.7 + benefitIndex * 0.1 }}
+                              >
+                                <CheckCircle className="w-4 h-4 text-accent-400" />
+                                <span className="text-xs sm:text-sm text-gray-400">{benefit}</span>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )
+                  })}
                   </div>
                 </div>
 
                 {/* CTA */}
                 <div className="text-center mt-8 sm:mt-12">
                   <motion.a
-                    href="https://wa.me/message/FKMWTP7IMGCCD1"
+                    href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
@@ -816,13 +816,15 @@ const Services: React.FC = () => {
 
                 <div className="text-center mt-8 sm:mt-12">
                   <motion.a
-                    href="/contacto"
+                    href="https://wa.me/523312206889?text=¡Hola! Necesito asesoría contable. ¿Pueden ayudarme con mis dudas fiscales?"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-xl transition-all duration-300 shadow-lg text-sm sm:text-base"
                   >
                     <Calculator className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>Consultar servicios</span>
+                    <span>Asesoría contable</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.a>
                 </div>

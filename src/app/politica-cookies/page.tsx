@@ -475,7 +475,7 @@ const PoliticaCookies: React.FC = () => {
                     <strong>Teléfono:</strong> <a href="tel:+523321650075" className="text-accent-600 hover:text-accent-700">+52 33 2165 0075</a>
                   </p>
                   <p className="text-gray-700">
-                    <strong>WhatsApp:</strong> <a href="https://wa.me/523321650075" target="_blank" rel="noopener noreferrer" className="text-accent-600 hover:text-accent-700">Contactar por WhatsApp</a>
+                    <strong>WhatsApp:</strong> <a href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?" target="_blank" rel="noopener noreferrer" className="text-accent-600 hover:text-accent-700">Contactar por WhatsApp</a>
                   </p>
                 </div>
               </div>

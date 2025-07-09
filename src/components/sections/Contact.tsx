@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, User, MessageSquare, Building, Clock, Bot, Calendar, CircuitBoard, ArrowRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, User, MessageSquare, Building, Clock, Bot, Calendar, CircuitBoard, ArrowRight, Calculator } from 'lucide-react'
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -483,7 +483,7 @@ const Contact: React.FC = () => {
                   </motion.a>
 
                   <motion.a
-                    href="https://wa.me/message/FKMWTP7IMGCCD1"
+                    href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
@@ -509,7 +509,7 @@ const Contact: React.FC = () => {
                   </motion.a>
 
                   <motion.a
-                    href="https://wa.me/523321650075"
+                    href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
@@ -528,6 +528,28 @@ const Contact: React.FC = () => {
                       <p className="text-gray-400 text-sm">33-21-65-00-75 (Ventas)</p>
                     </div>
                     <ArrowRight className="w-5 h-5 text-green-400 group-hover/btn:text-green-300" />
+                  </motion.a>
+
+                  <motion.a
+                    href="https://wa.me/523312206889?text=¡Hola! Necesito asesoría contable. ¿Pueden ayudarme con mis dudas fiscales?"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center space-x-4 p-4 bg-purple-500/10 border border-purple-500/30 rounded-xl hover:bg-purple-500/20 transition-all duration-300 group/btn"
+                  >
+                    <motion.div
+                      className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center"
+                      whileHover={{ rotate: [0, -10, 10, 0] }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Calculator className="w-6 h-6 text-white" />
+                    </motion.div>
+                    <div className="flex-1">
+                      <h4 className="text-white font-semibold">Asesor contable</h4>
+                      <p className="text-gray-400 text-sm">33-12-20-68-89 (Asesoría)</p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-purple-400 group-hover/btn:text-purple-300" />
                   </motion.a>
                 </div>
               </div>

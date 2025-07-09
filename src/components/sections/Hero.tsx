@@ -155,7 +155,7 @@ const Hero: React.FC = () => {
                 </motion.a>
 
                 <motion.a
-                  href="https://wa.me/message/FKMWTP7IMGCCD1"
+                  href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(25, 235, 145, 0.5)" }}

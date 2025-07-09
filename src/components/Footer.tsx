@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                 Agendar reunión
               </motion.a>
               <motion.a
-                href="https://wa.me/message/FKMWTP7IMGCCD1"
+                href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -173,7 +173,7 @@ const Footer: React.FC = () => {
                 transition={{ delay: 0.9 }}
               >
                 <a 
-                  href="https://wa.me/523321650075" 
+                  href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm sm:text-base flex items-center group"
@@ -189,7 +189,7 @@ const Footer: React.FC = () => {
                 transition={{ delay: 1.0 }}
               >
                 <a 
-                  href="https://wa.me/523321654671" 
+                  href="https://wa.me/523321654671?text=¡Hola! Necesito ayuda técnica con SOREN. ¿Pueden asistirme?" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base flex items-center group"
