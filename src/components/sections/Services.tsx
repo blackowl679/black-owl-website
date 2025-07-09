@@ -42,17 +42,33 @@ const Services: React.FC = () => {
       icon: Zap,
       title: "Facturación en segundos",
       description: "Con SOREN, facturar es tan fácil como enviar un mensaje. Olvídate de portales complicados o procesos lentos: desde tu chat puedes emitir facturas en segundos, incluso usando notas de voz.",
-      benefits: ["Facturación por voz", "Sin portales complejos", "Velocidad sin comparación"],
+      benefits: [
+        "Facturación por voz", 
+        "Sin portales complejos", 
+        "Velocidad sin comparación",
+        "Desde WhatsApp",
+        "Plantillas predefinidas"
+      ],
       hasVideo: true,
-      videoFile: "/videos/soren-facturacion-vertical.mp4"
+      videoFile: "/videos/soren-facturacion-vertical.mp4",
+      badge: "MÁS POPULAR",
+      badgeColor: "from-accent-500 to-accent-600"
     },
     {
       icon: FileText,
       title: "Administración de CFDIs",
       description: "Consulta, organiza y gestiona tus facturas emitidas, complementos de pago y notas de crédito en un solo lugar, de forma simple y automatizada.",
-      benefits: ["Gestión centralizada", "Organización automática", "Datos en tiempo real"],
+      benefits: [
+        "Gestión centralizada", 
+        "Organización automática", 
+        "Datos en tiempo real",
+        "Respaldos seguros en la nube",
+        "Acceso desde cualquier dispositivo"
+      ],
       hasVideo: true,
-      videoFile: "/videos/soren-administracion-cfdis-vertical.mp4"
+      videoFile: "/videos/soren-administracion-cfdis-vertical.mp4",
+      badge: "ESENCIAL",
+      badgeColor: "from-primary-500 to-primary-600"
     },
     {
       icon: MessageCircle,
@@ -565,38 +581,69 @@ const Services: React.FC = () => {
                             <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
                               {/* Content Section */}
                               <div className="order-1">
-                                <div className="flex items-start space-x-4 mb-4 sm:mb-6">
+                                <div className="flex items-start space-x-4 mb-6 sm:mb-8 lg:mb-10">
                                   <motion.div 
-                                    className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden"
+                                    className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden shadow-lg shadow-accent-500/25"
                                     whileHover={{ rotate: [0, 5, -5, 0] }}
                                     transition={{ duration: 0.5 }}
                                   >
-                                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white relative z-10" />
+                                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white relative z-10" />
                                     {/* Icon pulse effect */}
                                     <motion.div
-                                      className="absolute inset-0 bg-white/20 rounded-xl sm:rounded-2xl"
+                                      className="absolute inset-0 bg-white/20 rounded-xl sm:rounded-2xl lg:rounded-3xl"
                                       animate={{ opacity: [0, 0.5, 0] }}
                                       transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
                                     />
                                   </motion.div>
                                   <div className="flex-1">
-                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3">{feature.title}</h4>
-                                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4">{feature.description}</p>
+                                    {/* Badge */}
+                                    {feature.badge && (
+                                      <motion.div
+                                        initial={{ scale: 0 }}
+                                        animate={{ scale: 1 }}
+                                        transition={{ delay: 0.3, type: "spring" }}
+                                        className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${feature.badgeColor} mb-3 shadow-lg`}
+                                      >
+                                        <Sparkles className="w-3 h-3 mr-1" />
+                                        {feature.badge}
+                                      </motion.div>
+                                    )}
+                                    
+                                    <motion.h4 
+                                      className="text-lg sm:text-xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-3 sm:mb-4 lg:mb-6"
+                                      initial={{ opacity: 0, y: 20 }}
+                                      animate={{ opacity: 1, y: 0 }}
+                                      transition={{ delay: 0.2 }}
+                                    >
+                                      {feature.title}
+                                    </motion.h4>
+                                    
+                                    <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-300 leading-relaxed mb-6 lg:mb-8">
+                                      {feature.description}
+                                    </p>
                                   </div>
                                 </div>
 
-                                {/* Benefits */}
-                                <div className="grid gap-2">
+                                {/* Benefits with enhanced styling */}
+                                <div className="grid gap-3 lg:gap-4">
                                   {feature.benefits.map((benefit, benefitIndex) => (
                                     <motion.div 
                                       key={benefitIndex} 
-                                      className="flex items-center space-x-2"
+                                      className="flex items-center space-x-3 lg:space-x-4 group/benefit"
                                       initial={{ opacity: 0, x: -20 }}
                                       animate={{ opacity: 1, x: 0 }}
                                       transition={{ delay: 0.5 + benefitIndex * 0.1 }}
                                     >
-                                      <CheckCircle className="w-4 h-4 text-accent-400" />
-                                      <span className="text-xs sm:text-sm text-gray-400">{benefit}</span>
+                                      <motion.div 
+                                        className="w-5 h-5 lg:w-6 lg:h-6 bg-gradient-to-r from-accent-400 to-accent-500 rounded-full flex items-center justify-center shadow-lg shadow-accent-400/25 group-hover/benefit:scale-110 transition-transform duration-300"
+                                        whileHover={{ rotate: 360 }}
+                                        transition={{ duration: 0.6 }}
+                                      >
+                                        <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
+                                      </motion.div>
+                                      <span className="text-xs sm:text-sm lg:text-base xl:text-lg text-gray-300 group-hover/benefit:text-white transition-colors duration-300 font-medium">
+                                        {benefit}
+                                      </span>
                                     </motion.div>
                                   ))}
                                 </div>
