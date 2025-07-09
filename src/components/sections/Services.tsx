@@ -657,6 +657,12 @@ const Services: React.FC = () => {
                                     controls
                                     preload="metadata"
                                     poster="/images/hero/soren-avatar.png"
+                                    playsInline
+                                    muted
+                                    onError={(e) => {
+                                      console.error('Error loading video:', feature.videoFile);
+                                      console.error('Error details:', e);
+                                    }}
                                   >
                                     <source src={feature.videoFile} type="video/mp4" />
                                     Tu navegador no soporta el elemento video.
