@@ -50,7 +50,7 @@ const Services: React.FC = () => {
         "Plantillas predefinidas"
       ],
       hasVideo: true,
-      videoFile: "/videos/soren-facturacion-vertical.mp4",
+      youtubeId: "BGiwKp69_-E",
       badge: "MÁS POPULAR",
       badgeColor: "from-accent-500 to-accent-600"
     },
@@ -66,7 +66,7 @@ const Services: React.FC = () => {
         "Acceso desde cualquier dispositivo"
       ],
       hasVideo: true,
-      videoFile: "/videos/soren-administracion-cfdis-vertical.mp4",
+      youtubeId: "L-TV4BN03i4",
       badge: "ESENCIAL",
       badgeColor: "from-primary-500 to-primary-600"
     },
@@ -652,21 +652,14 @@ const Services: React.FC = () => {
                               {/* Video Section */}
                               <div className="order-2">
                                 <div className="relative">
-                                  <video 
-                                    className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg sm:rounded-xl border border-accent-500/20 shadow-lg shadow-accent-500/10"
-                                    controls
-                                    preload="metadata"
-                                    poster="/images/hero/soren-avatar.png"
-                                    playsInline
-                                    muted
-                                    onError={(e) => {
-                                      console.error('Error loading video:', feature.videoFile);
-                                      console.error('Error details:', e);
-                                    }}
-                                  >
-                                    <source src={feature.videoFile} type="video/mp4" />
-                                    Tu navegador no soporta el elemento video.
-                                  </video>
+                                  <iframe 
+                                    className="w-full h-[400px] lg:h-[500px] rounded-lg sm:rounded-xl border border-accent-500/20 shadow-lg shadow-accent-500/10"
+                                    src={`https://www.youtube.com/embed/${feature.youtubeId}?controls=1&modestbranding=1&rel=0&showinfo=0&fs=1&playsinline=1`}
+                                    title={feature.title}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                  />
                                   
                                   {/* Video overlay effects */}
                                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg sm:rounded-xl pointer-events-none" />
