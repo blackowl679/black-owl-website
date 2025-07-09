@@ -182,9 +182,9 @@ const Hero: React.FC = () => {
                     animate={{ textShadow: ["0 0 10px rgba(25,235,145,0.5)", "0 0 20px rgba(25,235,145,0.8)", "0 0 10px rgba(25,235,145,0.5)"] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    +120
+                    +2 años
                   </motion.div>
-                  <div className="text-xs sm:text-sm text-gray-400 font-medium">Negocios transformados con IA</div>
+                  <div className="text-xs sm:text-sm text-gray-400 font-medium">Transformando negocios con IA</div>
                 </div>
                 <div className="text-center group">
                   <motion.div 
