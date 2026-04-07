@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 // Variables de entorno para producción
-const NOCODB_BASE_URL = process.env.NOCODB_BASE_URL || 'https://devnocodb.bwblackowl.com'
+const NOCODB_BASE_URL = process.env.NOCODB_BASE_URL || 'https://devnocodb.garlia.ai'
 const NOCODB_TOKEN = process.env.NOCODB_TOKEN || 'N2s9-oxHaIaXbqXAcLDoeozLFpOgkLbFUIPqhG7x'
 const BASE_ID = process.env.NOCODB_BASE_ID || 'pjaayty2k4qsdnh'
 const TABLE_ID = process.env.NOCODB_TABLE_ID || 'mjs8cfmgp37f22v'

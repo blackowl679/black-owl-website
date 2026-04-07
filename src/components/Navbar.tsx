@@ -51,39 +51,17 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
+            className="flex items-center cursor-pointer"
             onClick={() => handleNavigation('/')}
           >
-            <div className="relative">
-              <motion.div
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center overflow-hidden"
-                animate={{ 
-                  boxShadow: ["0 0 20px rgba(26,142,235,0.3)", "0 0 30px rgba(25,235,145,0.5)", "0 0 20px rgba(26,142,235,0.3)"]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <Image
-                  src="/images/company/logo.png"
-                  alt="BLACK OWL Logo"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-contain"
-                  priority
-                />
-              </motion.div>
-              <motion.div
-                className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-accent-400 rounded-full"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
-            <div>
-              <span className={`text-lg sm:text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'gradient-text' : 'text-white'
-              }`}>
-                BLACK OWL
-              </span>
-            </div>
+            <Image
+              src={isScrolled ? "/images/company/logo-dark.svg" : "/images/company/logo-light.svg"}
+              alt="GARLIA Logo"
+              width={140}
+              height={45}
+              className="object-contain"
+              priority
+            />
           </motion.div>
 
           {/* Menu Desktop */}
@@ -114,7 +92,7 @@ const Navbar: React.FC = () => {
             
             {/* CTA Button */}
             <motion.a
-              href="https://calendly.com/bwblackowl/30min?month=2025-06"
+              href="https://calendly.com/garlia/30min?month=2025-06"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(26,142,235,0.3)" }}
@@ -189,7 +167,7 @@ const Navbar: React.FC = () => {
                 ))}
                 
                 <motion.a
-                  href="https://calendly.com/bwblackowl/30min?month=2025-06"
+                  href="https://calendly.com/garlia/30min?month=2025-06"
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}

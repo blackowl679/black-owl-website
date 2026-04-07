@@ -141,7 +141,7 @@ const Hero: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start"
               >
                 <motion.a
-                  href="https://calendly.com/bwblackowl/30min?month=2025-06"
+                  href="https://calendly.com/garlia/30min?month=2025-06"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(26, 142, 235, 0.5)" }}
@@ -154,19 +154,7 @@ const Hero: React.FC = () => {
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform duration-300 z-10" />
                 </motion.a>
 
-                <motion.a
-                  href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(25, 235, 145, 0.5)" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="group inline-flex items-center justify-center bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold py-4 px-6 sm:py-5 sm:px-10 rounded-2xl transition-all duration-300 shadow-xl relative overflow-hidden text-base sm:text-lg"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <Bot className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 z-10" />
-                  <span className="z-10">Probar a Soren gratis</span>
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform duration-300 z-10" />
-                </motion.a>
+
               </motion.div>
 
               {/* Stats */}

@@ -42,7 +42,7 @@ const WhatsAppButton: React.FC = () => {
             {/* Options */}
             <div className="py-2">
               <motion.a
-                href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?"
+                href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de GARLIA. ¿Podrían brindarme información?"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -20 }}

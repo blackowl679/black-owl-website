@@ -222,7 +222,7 @@ const Contact: React.FC = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             Da el siguiente paso con <span className="gradient-text relative">
-              BLACK OWL
+              GARLIA
               <motion.div
                 className="absolute -inset-2 bg-gradient-to-r from-primary-500/20 to-accent-500/20 blur-xl"
                 animate={{ opacity: [0.3, 0.8, 0.3] }}
@@ -456,7 +456,7 @@ const Contact: React.FC = () => {
                 
                 <div className="space-y-4 sm:space-y-6">
                   <motion.a
-                    href="https://calendly.com/bwblackowl/30min?month=2025-06"
+                    href="https://calendly.com/garlia/30min?month=2025-06"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
@@ -482,34 +482,10 @@ const Contact: React.FC = () => {
                     </motion.div>
                   </motion.a>
 
-                  <motion.a
-                    href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center space-x-4 p-4 bg-accent-500/10 border border-accent-500/30 rounded-xl hover:bg-accent-500/20 transition-all duration-300 group/btn"
-                  >
-                    <motion.div
-                      className="w-12 h-12 bg-gradient-to-r from-accent-500 to-accent-600 rounded-lg flex items-center justify-center"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <img 
-                        src="/images/hero/soren-avatar.png" 
-                        alt="SOREN Avatar" 
-                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
-                      />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-semibold">Probar SOREN gratis</h4>
-                      <p className="text-gray-400 text-sm">Inicia conversación en WhatsApp</p>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-accent-400 group-hover/btn:text-accent-300" />
-                  </motion.a>
+
 
                   <motion.a
-                    href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?"
+                    href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de GARLIA. ¿Podrían brindarme información?"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
@@ -530,27 +506,7 @@ const Contact: React.FC = () => {
                     <ArrowRight className="w-5 h-5 text-green-400 group-hover/btn:text-green-300" />
                   </motion.a>
 
-                  <motion.a
-                    href="https://wa.me/523312206889?text=¡Hola! Necesito asesoría contable. ¿Pueden ayudarme con mis dudas fiscales?"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center space-x-4 p-4 bg-purple-500/10 border border-purple-500/30 rounded-xl hover:bg-purple-500/20 transition-all duration-300 group/btn"
-                  >
-                    <motion.div
-                      className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center"
-                      whileHover={{ rotate: [0, -10, 10, 0] }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Calculator className="w-6 h-6 text-white" />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-semibold">Asesor contable</h4>
-                      <p className="text-gray-400 text-sm">33-12-20-68-89 (Asesoría)</p>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-purple-400 group-hover/btn:text-purple-300" />
-                  </motion.a>
+
                 </div>
               </div>
             </div>
@@ -577,7 +533,7 @@ const Contact: React.FC = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-primary-400" />
-                    <span className="text-gray-300">bwblackowl@gmail.com</span>
+                    <span className="text-gray-300">ventas@garlia.ai</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-accent-400" />

@@ -16,7 +16,7 @@ const LoadingSpinner = () => {
           animate={{ opacity: 1 }}
           className="text-gray-600 font-medium"
         >
-          Cargando BLACK OWL...
+          Cargando GARLIA...
         </motion.p>
       </div>
     </div>

@@ -5,26 +5,26 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BLACK OWL - Firma contable e Inteligencia Artificial',
-  description: 'Revolucionamos tu negocio y contabilidad con IA. Convertimos la IA en una ventaja real para tu negocio: más eficiencia, menos errores y una gestión más inteligente.',
-  keywords: 'contabilidad, inteligencia artificial, IA, BLACK OWL, SOREN, agente contable, automatización, facturación, CFDIs, consultoría IA',
-  authors: [{ name: 'BLACK OWL' }],
-  creator: 'BLACK OWL',
-  publisher: 'BLACK OWL',
+  title: 'GARLIA - Agencia de Inteligencia Artificial',
+  description: 'Revolucionamos tu negocio impulsando tu crecimiento con IA. Convertimos la IA en una ventaja competitiva real: más eficiencia, menos errores y automatización completa.',
+  keywords: 'inteligencia artificial, IA, GARLIA, SOREN, agente virtual, automatización, consultoría IA, innovación, optimización, startups, empresas',
+  authors: [{ name: 'GARLIA' }],
+  creator: 'GARLIA',
+  publisher: 'GARLIA',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://bwblackowl.com' : 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://garlia.ai' : 'http://localhost:3000'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'BLACK OWL - Firma contable e Inteligencia Artificial',
-    description: 'Revolucionamos tu negocio y contabilidad con IA. Convertimos la IA en una ventaja real para tu negocio.',
-    url: 'https://bwblackowl.com',
-    siteName: 'BLACK OWL',
+    title: 'GARLIA - Agencia de Inteligencia Artificial',
+    description: 'Revolucionamos tu negocio impulsando tu crecimiento con IA. Convertimos la IA en una ventaja competitiva real.',
+    url: 'https://garlia.ai',
+    siteName: 'GARLIA',
     locale: 'es_MX',
     type: 'website',
     images: [
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
         url: '/images/og/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BLACK OWL - Firma contable e IA',
+        alt: 'GARLIA - Agencia de IA',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BLACK OWL - Firma contable e IA',
-    description: 'Revolucionamos tu negocio y contabilidad con IA.',
+    title: 'GARLIA - Agencia de IA',
+    description: 'Revolucionamos tu negocio impulsando tu crecimiento con IA.',
     images: ['/images/og/og-image.jpg'],
   },
   robots: {

@@ -19,7 +19,7 @@ const Testimonials: React.FC = () => {
       company: "GRUPO DIM",
       companyLogo: "/images/logos/grupo-dim.png",
       avatar: "/api/placeholder/100/100",
-      content: "Mi empresa creció muy rápido, pero nuestros procesos se quedaron atrás. BLACK OWL no solo nos ayudó a ordenar la parte contable, sino que nos propuso soluciones con IA que jamás imaginé. Hoy tenemos un agente inteligente que responde dudas, automatiza reportes y nos hace la vida más fácil. Es como si hubiera ampliado mi equipo sin contratar a nadie.",
+      content: "Mi empresa creció muy rápido, pero nuestros procesos se quedaron atrás. GARLIA nos ayudó a integrar asistentes de IA que jamás imaginé. Hoy tenemos un agente inteligente que responde dudas, automatiza reportes operativos y nos hace la vida más fácil. Es como si hubiera ampliado mi equipo diez veces sin contratar a nadie extra.",
       rating: 5,
       highlight: "Ampliación del equipo con IA"
     },
@@ -30,9 +30,9 @@ const Testimonials: React.FC = () => {
       company: "Critters",
       companyLogo: "/images/logos/critters.png",
       avatar: "/api/placeholder/100/100",
-      content: "Llevaba meses batallando con temas fiscales, perder tiempo facturando y acumulando papeles sin sentido. Con Soren, todo eso se resolvió en días. Literal, ahora mando un mensaje por WhatsApp y ya tengo mi factura lista. BLACK OWL me hizo sentir que la tecnología también puede ser accesible para las emprendedoras como yo.",
+      content: "Llevaba meses perdiendo tiempo en tareas manuales y repetitivas que no aportaban valor. Con Soren, todo eso se resolvió en días. Literalmente, ahora mando un mensaje y mis procesos administrativos se ejecutan solos. GARLIA me demostró que la inteligencia artificial no es solo para corporativos, sino también para emprendedoras como yo.",
       rating: 5,
-      highlight: "Tecnología accesible"
+      highlight: "IA para emprendedores"
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ const Testimonials: React.FC = () => {
       company: "INDI INMOBILIARIA",
       companyLogo: "/images/logos/indi-inmobiliaria.png",
       avatar: "/api/placeholder/100/100",
-      content: "En bienes raíces, el tiempo lo es todo. Pero nuestros procesos internos eran lentos y poco claros. Con BLACK OWL analizamos nuestras operaciones y nos propusieron automatizaciones específicas que hoy nos ahorran horas cada semana. Lo mejor: entendieron nuestras necesidades sin complicarnos con tecnicismos.",
+      content: "En bienes raíces, el tiempo de respuesta lo es todo. Con GARLIA implementamos automatizaciones específicas que hoy nos ahorran docenas de horas cada semana en atención y prospección. Lo mejor: entendieron nuestras necesidades sin complicarnos con lenguajes técnicos o implementaciones imposibles.",
       rating: 5,
       highlight: "Ahorro de tiempo real"
     },
@@ -52,7 +52,7 @@ const Testimonials: React.FC = () => {
       company: "Nutripostres",
       companyLogo: "/images/logos/nutripostres.png",
       avatar: "/api/placeholder/100/100",
-      content: "Nunca pensé que llevar la contabilidad de un negocio de postres pudiera ser tan simple. Con Soren no solo entendí mis números, sino que aprendí a usarlos para tomar mejores decisiones. Ya no tengo miedo a las declaraciones ni al SAT. Me siento acompañada, pero con velocidad y tecnología de otro nivel.",
+      content: "Nunca pensé que automatizar mi negocio pudiera ser tan simple. Con las herramientas de GARLIA no solo aceleré mis ventas, sino que obtengo pronósticos automáticos basados en IA para tomar mejores decisiones. Ya no operamos a ciegas. Me siento acompañada con tecnología de otro nivel.",
       rating: 5,
       highlight: "Decisiones inteligentes"
     },
@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
       company: "Taller Mecánico Meza",
       companyLogo: "/images/logos/taller-meza.png",
       avatar: "/api/placeholder/100/100",
-      content: "Soy mecánico, no contador ni programador. Pero con BLACK OWL todo fue claro desde el inicio. Me ayudaron a organizar mi negocio, automatizar mis facturas y dejar de preocuparme por los impuestos. Ahora tengo más tiempo para lo que realmente importa: atender bien a mis clientes.",
+      content: "Soy mecánico, no ingeniero de software. Pero con GARLIA la adopción tecnológica en mi negocio fue natural. Me ayudaron a automatizar la atención de cotizaciones e inventaros. Ahora tengo tiempo de sobra para lo que realmente importa: los vehículos de mis clientes.",
       rating: 5,
       highlight: "Simplicidad y claridad"
     }
@@ -278,7 +278,7 @@ const Testimonials: React.FC = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Testimonios de quienes ya trabajan con BLACK OWL
+            Testimonios de quienes ya trabajan con GARLIA
           </motion.p>
         </motion.div>
 

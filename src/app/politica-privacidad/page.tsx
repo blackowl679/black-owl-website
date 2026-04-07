@@ -68,7 +68,7 @@ const PoliticaPrivacidad: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 m-0">1. Introducción</h2>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                En <strong>BLACK OWL</strong> (en adelante "nosotros", "nuestro" o "la empresa"), respetamos tu privacidad y nos comprometemos a proteger la información personal que compartes con nosotros. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos tu información cuando utilizas nuestros servicios de contabilidad e inteligencia artificial, incluido nuestro agente IA SOREN, nuestro sitio web <a href="https://bwblackowl.com" className="text-primary-600 hover:text-primary-700">bwblackowl.com</a> y servicios relacionados.
+                En <strong>GARLIA</strong> (en adelante "nosotros", "nuestro" o "la empresa"), respetamos tu privacidad y nos comprometemos a proteger la información personal que compartes con nosotros. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos tu información cuando utilizas nuestros servicios de contabilidad e inteligencia artificial, incluido nuestro agente IA SOREN, nuestro sitio web <a href="https://garlia.ai" className="text-primary-600 hover:text-primary-700">garlia.ai</a> y servicios relacionados.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Al utilizar nuestros servicios, aceptas las prácticas descritas en esta política. Si no estás de acuerdo con alguna parte de esta política, por favor no utilices nuestros servicios.
@@ -366,7 +366,7 @@ const PoliticaPrivacidad: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-primary-600" />
                     <span className="font-medium">Email:</span>
-                    <a href="mailto:privacidad@bwblackowl.com" className="text-primary-600 hover:text-primary-700">privacidad@bwblackowl.com</a>
+                    <a href="mailto:privacidad@garlia.ai" className="text-primary-600 hover:text-primary-700">privacidad@garlia.ai</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-primary-600" />
@@ -377,7 +377,7 @@ const PoliticaPrivacidad: React.FC = () => {
                     <Database className="w-5 h-5 text-primary-600 mt-0.5" />
                     <div>
                       <span className="font-medium">Responsable del tratamiento:</span>
-                      <p className="text-gray-700 mt-1">BLACK OWL<br />Guadalajara, Jalisco, México</p>
+                      <p className="text-gray-700 mt-1">GARLIA<br />Guadalajara, Jalisco, México</p>
                     </div>
                   </div>
                 </div>

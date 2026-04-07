@@ -43,7 +43,7 @@ const FAQ: React.FC = () => {
       color: "from-primary-500 to-primary-600",
       questions: [
         {
-          question: "¿Qué tipo de empresas pueden trabajar con BLACK OWL?",
+          question: "¿Qué tipo de empresas pueden trabajar con GARLIA?",
           answer: "Trabajamos con empresas de todos los tamaños y giros. Cualquier negocio o empresa, no importa el tamaño o la operación, puede implementar IA. Solo se necesita que estén dispuestos a hacer el cambio."
         },
         {

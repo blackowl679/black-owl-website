@@ -10,12 +10,12 @@ const Innovation: React.FC = () => {
 
   const innovations = [
     {
-      icon: () => <img src="/images/hero/soren-avatar.png" alt="SOREN Avatar" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />,
-      title: "SOREN – Tu agente IA contable",
-      description: "Soren es tu asistente contable inteligente en WhatsApp. Diseñado para emprendedores y empresas, Soren te acompaña las 24/7 resolviendo tus dudas fiscales, ayudándote a emitir facturas y organizando tu información contable sin complicaciones.",
-      color: "from-accent-500 to-accent-600",
-      buttonText: "Quiero saber más",
-      buttonLink: "/servicios#soren"
+      icon: () => <div className="w-full h-full bg-gradient-to-r from-green-500 to-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden"><img src="/images/hero/sales-squad-icon.png" alt="Sales Squad Icon" className="w-full h-full scale-[1.3] object-contain drop-shadow-md" /></div>,
+      title: "Sales Squad – Tu Equipo IA de Ventas",
+      description: "Sistema inteligente multi-agente que resuelve el gran cuello de botella en ventas: velocidad y seguimiento. Califica leads, hace seguimientos incansables y cierra objetivos, apoyado por nuestro sistema Human-in-the-Loop (HITL).",
+      color: "from-green-500 to-green-600",
+      buttonText: "Saber más",
+      buttonLink: "/servicios"
     },
     {
       icon: Brain,

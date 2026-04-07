@@ -205,7 +205,7 @@ const PoliticaCookies: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 m-0">1. ¿Qué son las Cookies?</h2>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web <strong>bwblackowl.com</strong>. Estos archivos nos permiten reconocer tu navegador y, si tienes una cuenta registrada, asociarlo con tu cuenta de usuario.
+                Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web <strong>garlia.ai</strong>. Estos archivos nos permiten reconocer tu navegador y, si tienes una cuenta registrada, asociarlo con tu cuenta de usuario.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Las cookies nos ayudan a personalizar tu experiencia, recordar tus preferencias y mejorar el funcionamiento de nuestros servicios de contabilidad e inteligencia artificial.
@@ -469,13 +469,13 @@ const PoliticaCookies: React.FC = () => {
                 </p>
                 <div className="space-y-2">
                   <p className="text-gray-700">
-                    <strong>Email:</strong> <a href="mailto:privacidad@bwblackowl.com" className="text-accent-600 hover:text-accent-700">privacidad@bwblackowl.com</a>
+                    <strong>Email:</strong> <a href="mailto:privacidad@garlia.ai" className="text-accent-600 hover:text-accent-700">privacidad@garlia.ai</a>
                   </p>
                   <p className="text-gray-700">
                     <strong>Teléfono:</strong> <a href="tel:+523321650075" className="text-accent-600 hover:text-accent-700">+52 33 2165 0075</a>
                   </p>
                   <p className="text-gray-700">
-                    <strong>WhatsApp:</strong> <a href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?" target="_blank" rel="noopener noreferrer" className="text-accent-600 hover:text-accent-700">Contactar por WhatsApp</a>
+                    <strong>WhatsApp:</strong> <a href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de GARLIA. ¿Podrían brindarme información?" target="_blank" rel="noopener noreferrer" className="text-accent-600 hover:text-accent-700">Contactar por WhatsApp</a>
                   </p>
                 </div>
               </div>

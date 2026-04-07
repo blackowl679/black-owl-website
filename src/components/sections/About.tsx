@@ -240,7 +240,7 @@ const About: React.FC = () => {
               {/* Primera parte del contenido */}
               <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
                 <p>
-                  <strong className="text-primary-400">BLACK OWL</strong> nació como una firma contable con una visión clara: 
+                  <strong className="text-primary-400">GARLIA</strong> nació como una firma contable con una visión clara: 
                   ayudar a las empresas a tener control, claridad y estrategia financiera. Por años brindamos servicios 
                   contables y fiscales bajo los más altos estándares, acompañando a negocios en sus procesos diarios, 
                   declaraciones y toma de decisiones.
@@ -289,7 +289,7 @@ const About: React.FC = () => {
               {/* Closing statement */}
               <div className="pt-4 border-t border-white/10">
                 <p className="text-base sm:text-lg text-center text-gray-300 leading-relaxed">
-                  En BLACK OWL no solo entendemos hacia dónde va el futuro de los negocios: 
+                  En GARLIA no solo entendemos hacia dónde va el futuro de los negocios: 
                   <strong className="text-primary-400"> lo estamos construyendo contigo</strong>.
                 </p>
               </div>
@@ -477,7 +477,7 @@ const About: React.FC = () => {
                   Un nuevo estándar para las empresas del <span className="gradient-text">futuro</span>
                 </motion.h3>
                 <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                  En BLACK OWL creemos que la inteligencia artificial no debe ser exclusiva para las grandes corporaciones. Nuestra visión es acercarla a todos las empresas que quieran crecer, evolucionar y ser parte de la nueva era empresarial.
+                  En GARLIA creemos que la inteligencia artificial no debe ser exclusiva para las grandes corporaciones. Nuestra visión es acercarla a todos las empresas que quieran crecer, evolucionar y ser parte de la nueva era empresarial.
                   <br /><br />
                   No solo ofrecemos servicios. Creamos <strong className="text-primary-400">aliados inteligentes</strong> capaces de transformar el presente y proyectarte hacia el futuro. Si tú también crees que la inteligencia artificial debe estar al alcance de todos, entonces vamos por el mismo camino.
                 </p>

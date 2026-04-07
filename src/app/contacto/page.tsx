@@ -6,8 +6,8 @@ import WhatsAppButton from '../../components/WhatsAppButton'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contacto - BLACK OWL',
-  description: 'Ponte en contacto con BLACK OWL para transformar tu contabilidad con IA',
+  title: 'Contacto - GARLIA',
+  description: 'Ponte en contacto con GARLIA para transformar tu contabilidad con IA',
 }
 
 export default function ContactoPage() {

@@ -22,20 +22,15 @@ const Footer: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center space-x-3 mb-4 sm:mb-6"
+              className="mb-4 sm:mb-6"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/images/company/logo.png"
-                  alt="BLACK OWL Logo"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-bold gradient-text">BLACK OWL</span>
-              </div>
+              <Image
+                src="/images/company/logo-light.svg"
+                alt="GARLIA Logo"
+                width={160}
+                height={50}
+                className="object-contain"
+              />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -44,7 +39,7 @@ const Footer: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="text-gray-300 mb-6 max-w-md text-sm sm:text-base leading-relaxed"
             >
-              La firma que revoluciona tu negocio y contabilidad con inteligencia artificial. 
+              La firma que revoluciona tu negocio con inteligencia artificial. 
               Convertimos la IA en una ventaja real para tu empresa.
             </motion.p>
             <motion.div
@@ -55,7 +50,7 @@ const Footer: React.FC = () => {
               className="flex flex-col gap-3"
             >
               <motion.a
-                href="https://calendly.com/bwblackowl/30min?month=2025-06"
+                href="https://calendly.com/garlia/30min?month=2025-06"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -65,17 +60,7 @@ const Footer: React.FC = () => {
                 <Calendar className="w-4 h-4 mr-2" />
                 Agendar reunión
               </motion.a>
-              <motion.a
-                href="https://wa.me/523313014634?text=¡Hola! Me interesa probar SOREN gratis. ¿Puedes ayudarme a comenzar?"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white py-2.5 px-4 sm:py-3 sm:px-6 rounded-lg font-semibold transition-all duration-300 shadow-lg text-sm sm:text-base"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Probar Soren gratis
-              </motion.a>
+
             </motion.div>
           </div>
 
@@ -125,7 +110,7 @@ const Footer: React.FC = () => {
               {[
                 "Soluciones Integrales con IA",
                 "SOREN - Agente IA",
-                "Contabilidad Tradicional"
+                "Sales Squad"
               ].map((service, index) => (
                 <motion.li
                   key={service}
@@ -159,11 +144,11 @@ const Footer: React.FC = () => {
                 transition={{ delay: 0.8 }}
               >
                 <a 
-                  href="mailto:bwblackowl@gmail.com" 
+                  href="mailto:ventas@garlia.ai" 
                   className="text-gray-300 hover:text-accent-400 transition-colors duration-300 text-sm sm:text-base flex items-center group"
                 >
                   <Mail className="w-4 h-4 mr-3 text-accent-500" />
-                  bwblackowl@gmail.com
+                  ventas@garlia.ai
                 </a>
               </motion.li>
               <motion.li
@@ -173,7 +158,7 @@ const Footer: React.FC = () => {
                 transition={{ delay: 0.9 }}
               >
                 <a 
-                  href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de BLACK OWL. ¿Podrían brindarme información?" 
+                  href="https://wa.me/523321650075?text=¡Hola! Me interesa conocer más sobre los servicios de GARLIA. ¿Podrían brindarme información?" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm sm:text-base flex items-center group"
@@ -249,7 +234,7 @@ const Footer: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
-                © 2025 BLACK OWL. Todos los derechos reservados.
+                © 2025 GARLIA. Todos los derechos reservados.
               </p>
               <div className="flex items-center space-x-1 text-gray-400 text-xs sm:text-sm">
                 <span>Desarrollado con</span>

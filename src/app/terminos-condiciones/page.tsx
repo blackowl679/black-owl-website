@@ -68,7 +68,7 @@ const TerminosCondiciones: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 m-0">1. Aceptación de los Términos</h2>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Al acceder y utilizar los servicios de <strong>BLACK OWL</strong> (la "Empresa"), incluido nuestro sitio web <a href="https://bwblackowl.com" className="text-primary-600 hover:text-primary-700">bwblackowl.com</a>, nuestro agente de inteligencia artificial SOREN, y cualquier servicio relacionado (colectivamente, los "Servicios"), usted acepta estar sujeto a estos Términos y Condiciones ("Términos").
+                Al acceder y utilizar los servicios de <strong>GARLIA</strong> (la "Empresa"), incluido nuestro sitio web <a href="https://garlia.ai" className="text-primary-600 hover:text-primary-700">garlia.ai</a>, nuestro agente de inteligencia artificial SOREN, y cualquier servicio relacionado (colectivamente, los "Servicios"), usted acepta estar sujeto a estos Términos y Condiciones ("Términos").
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros Servicios. Nos reservamos el derecho de modificar estos términos en cualquier momento, y su uso continuado de los Servicios constituye su aceptación de dichas modificaciones.
@@ -229,7 +229,7 @@ const TerminosCondiciones: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">6.1 Nuestros Derechos</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    BLACK OWL retiene todos los derechos, títulos e intereses en los Servicios, incluido el software SOREN, algoritmos de IA, interfaces de usuario, documentación y cualquier contenido proporcionado por nosotros. Estos están protegidos por derechos de autor, marcas comerciales y otras leyes de propiedad intelectual.
+                    GARLIA retiene todos los derechos, títulos e intereses en los Servicios, incluido el software SOREN, algoritmos de IA, interfaces de usuario, documentación y cualquier contenido proporcionado por nosotros. Estos están protegidos por derechos de autor, marcas comerciales y otras leyes de propiedad intelectual.
                   </p>
                 </div>
 
@@ -294,7 +294,7 @@ const TerminosCondiciones: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">8.2 Límites de Responsabilidad</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    En la medida máxima permitida por la ley, BLACK OWL no será responsable por:
+                    En la medida máxima permitida por la ley, GARLIA no será responsable por:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-gray-700">
                     <li>Daños indirectos, incidentales, especiales o consecuenciales</li>
@@ -330,7 +330,7 @@ const TerminosCondiciones: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">9.2 Terminación por BLACK OWL</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">9.2 Terminación por GARLIA</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Podemos suspender o terminar su acceso a los Servicios inmediatamente si:
                   </p>
@@ -379,7 +379,7 @@ const TerminosCondiciones: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-primary-600" />
                     <span className="font-medium">Email Legal:</span>
-                    <a href="mailto:legal@bwblackowl.com" className="text-primary-600 hover:text-primary-700">legal@bwblackowl.com</a>
+                    <a href="mailto:legal@garlia.ai" className="text-primary-600 hover:text-primary-700">legal@garlia.ai</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-primary-600" />
@@ -390,7 +390,7 @@ const TerminosCondiciones: React.FC = () => {
                     <FileText className="w-5 h-5 text-primary-600 mt-0.5" />
                     <div>
                       <span className="font-medium">Domicilio Legal:</span>
-                      <p className="text-gray-700 mt-1">BLACK OWL<br />Guadalajara, Jalisco, México</p>
+                      <p className="text-gray-700 mt-1">GARLIA<br />Guadalajara, Jalisco, México</p>
                     </div>
                   </div>
                 </div>

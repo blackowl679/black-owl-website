@@ -29,11 +29,11 @@ const Services: React.FC = () => {
       color: 'from-accent-500 to-accent-600'
     },
     {
-      id: 'traditional',
-      title: 'Servicios contables y fiscales',
-      subtitle: '',
-      icon: Calculator,
-      color: 'from-purple-500 to-purple-600'
+      id: 'salessquad',
+      title: 'Sales Squad',
+      subtitle: 'IA para multiplicar tus ventas',
+      icon: () => <img src="/images/hero/sales-squad-icon.png" alt="Sales Squad Icon" className="w-full h-full scale-[1.3] object-contain drop-shadow-md" />,
+      color: 'from-green-500 to-green-600'
     }
   ]
 
@@ -416,7 +416,7 @@ const Services: React.FC = () => {
                     Soluciones integrales con IA
                   </h3>
                   <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-                    En BLACK OWL diseñamos soluciones a la medida para que las empresas evolucionen, mejoren su productividad y escalen con inteligencia artificial. Desde asistentes inteligentes hasta automatizaciones completas, conectamos tu operación actual con el futuro, guiándote con soluciones IA que se adaptan, crecen y evolucionan contigo.
+                    En GARLIA diseñamos soluciones a la medida para que las empresas evolucionen, mejoren su productividad y escalen con inteligencia artificial. Desde asistentes inteligentes hasta automatizaciones completas, conectamos tu operación actual con el futuro, guiándote con soluciones IA que se adaptan, crecen y evolucionan contigo.
                   </p>
                 </div>
 
@@ -499,7 +499,7 @@ const Services: React.FC = () => {
                 {/* CTA */}
                 <div className="text-center mt-8 sm:mt-12">
                   <motion.a
-                    href="https://calendly.com/bwblackowl/30min?month=2025-06"
+                    href="https://calendly.com/garlia/30min?month=2025-06"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
@@ -772,7 +772,7 @@ const Services: React.FC = () => {
               </div>
             )}
 
-            {/* Traditional Services Tab */}
+            {/* Sales Squad Tab */}
             {activeTab === 2 && (
               <div className="space-y-8 sm:space-y-12">
                 <div className="text-center mb-8 sm:mb-12">
@@ -780,56 +780,117 @@ const Services: React.FC = () => {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring" }}
-                    className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-purple-500/25"
+                    className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-green-500/25 overflow-hidden"
                   >
-                    <Calculator className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                    <img 
+                      src="/images/hero/sales-squad-icon.png" 
+                      alt="Sales Squad" 
+                      className="w-full h-full scale-[1.3] object-contain drop-shadow-md"
+                    />
                   </motion.div>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
-                    Servicios contables y fiscales
+                    Sales Squad – Tu Equipo IA de Ventas
                   </h3>
                   <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-                    Aunque en BLACK OWL apostamos por la innovación con IA, entendemos que toda transformación empresarial necesita una base sólida. Por eso, seguimos ofreciendo nuestros servicios contables y fiscales con el mismo compromiso, precisión y visión estratégica que nos ha definido desde el inicio.
+                    Un sistema inteligente multi-agente que resuelve el gran cuello de botella: <strong>velocidad y seguimiento</strong>. No es un chatbot genérico, es un equipo entrenable que se adapta a tu proceso comercial, capaz de calificar leads, hacer seguimientos incansables (texto y voz) y cerrar objetivos, apoyado por nuestro sistema <strong>Human-in-the-Loop (HITL)</strong>.
                   </p>
                 </div>
 
-                <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-                  {traditionalServices.map((service, index) => {
-                    const Icon = service.icon
-                    return (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 + index * 0.1 }}
-                        className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-all duration-300 group h-full"
-                      >
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                          <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                        </div>
-                        
-                        <h4 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">{service.title}</h4>
-                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{service.description}</p>
-                      </motion.div>
-                    )
-                  })}
+                {/* HITL Notice */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-1 h-full bg-green-500" />
+                  <div className="flex items-start sm:items-center space-x-4">
+                    <Shield className="w-8 h-8 sm:w-12 sm:h-12 text-green-400 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg sm:text-xl font-bold text-white mb-1">Human-in-The-Loop (HITL)</h4>
+                      <p className="text-sm sm:text-base text-gray-300">
+                        La IA pregunta y atiende; <strong>el humano valida</strong>. Nuestro sistema avisa a tu personal cuando se requiere tocar información sensible (precios, disponibilidad, excepciones), logrando escalar tu atención sin perder certidumbre ni confianza corporativa.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Roles Grid */}
+                <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 mt-8">
+                  {[
+                    {
+                      icon: Users,
+                      title: "Agente de Calificación",
+                      desc: "Filtra curiosos e identifica a los interesados reales haciendo preguntas estratégicas. Salva el tiempo de tus vendedores humanos para quienes de verdad van a comprar."
+                    },
+                    {
+                      icon: MessageCircle,
+                      title: "Especial. de Seguimiento",
+                      desc: "Toma las riendas del 80% de ventas que requieren 5 seguimientos o más. Evalúa si usar chat o activar una 'Llamada de voz con IA' para mantener el interés vivo."
+                    },
+                    {
+                      icon: TrendingUp,
+                      title: "Cerrador de Objetivos",
+                      desc: "Va más allá del simple chat y empuja la conversación hacia un objetivo real: agendar una cita, enviar una cotización o cerrar la compra exitosamente."
+                    }
+                  ].map((role, rIndex) => (
+                    <motion.div
+                      key={rIndex}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5 + rIndex * 0.1 }}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors"
+                    >
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <role.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h4 className="text-lg font-bold text-white mb-2">{role.title}</h4>
+                      <p className="text-sm text-gray-300">{role.desc}</p>
+                    </motion.div>
+                  ))}
                 </div>
 
+                {/* Metrics */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
+                  {[
+                    { label: "Velocidad de respuesta", value: "10x", detail: "Atención instantánea 0 esperas" },
+                    { label: "Reducción de carga", value: "80%", detail: "Menos trabajo manual de filtro" },
+                    { label: "Más seguimientos", value: "5x", detail: "Consistencia super-humana" },
+                    { label: "Disponibilidad", value: "24/7", detail: "Nunca pierdas un lead nocturno" }
+                  ].map((metric, mIndex) => (
+                    <motion.div
+                      key={mIndex}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.8 + mIndex * 0.1 }}
+                      className="text-center p-4 bg-white/5 rounded-xl border border-white/10"
+                    >
+                      <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-1">{metric.value}</div>
+                      <div className="text-sm font-semibold text-white">{metric.label}</div>
+                      <div className="text-xs text-gray-400 mt-1">{metric.detail}</div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* CTA */}
                 <div className="text-center mt-8 sm:mt-12">
                   <motion.a
-                    href="https://wa.me/523312206889?text=¡Hola! Necesito asesoría contable. ¿Pueden ayudarme con mis dudas fiscales?"
+                    href="https://wa.me/523328117810?text=¡Hola! Quiero hablar con un consultor sobre implementar Sales Squad en mi empresa."
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-xl transition-all duration-300 shadow-lg text-sm sm:text-base"
+                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-xl transition-all duration-300 shadow-lg text-sm sm:text-base"
                   >
-                    <Calculator className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>Asesoría contable</span>
+                    <Bot className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <span>Habilitar Sales Squad</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.a>
                 </div>
               </div>
             )}
+
+
           </motion.div>
         </AnimatePresence>
       </div>

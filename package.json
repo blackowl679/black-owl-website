@@ -1,7 +1,7 @@
 {
-  "name": "black-owl-website",
+  "name": "garlia-website",
   "version": "1.0.0",
-  "description": "Sitio web corporativo de BLACK OWL - Firma contable e IA",
+  "description": "Sitio web corporativo de GARLIA - Firma contable e IA",
   "private": true,
   "scripts": {
     "dev": "next dev",
